@@ -10,8 +10,8 @@ Sky130 6T SRAM Cell Design
 
 Results
 --------
-Write '1' Delay : 66 ps
-Write '0' Delay : 39.8 ps
-Read Delay      : 68 ps
-Peak Current    : 6.08 µA
-Average Power   : 19.14 pW
+Write '1' Delay : 66 ps <br>
+Write '0' Delay : 39.8 ps <br>
+Read Delay      : 68 ps <br>
+Peak Current    : 6.08 µA <br>
+Average Power   : 19.14 pW <br>
