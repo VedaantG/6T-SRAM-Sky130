@@ -1,14 +1,14 @@
 Sky130 6T SRAM Cell Design
 
-• Technology: Sky130A (130 nm)
-• Schematic Capture: Xschem
-• Layout: Magic VLSI
-• DRC: Passed
-• LVS: Passed
-• Post-layout Parasitic Extraction: Completed
-• Simulator: ngspice
+• Technology: Sky130A (130 nm) <br>
+• Schematic Capture: Xschem <br>
+• Layout: Magic VLSI <br>
+• DRC: Passed <br>
+• LVS: Passed <br>
+• Post-layout Parasitic Extraction: Completed <br>
+• Simulator: ngspice <br>
 
-Results
+Results (After Parasitic Extraction)
 --------
 Write '1' Delay : 66 ps <br>
 Write '0' Delay : 39.8 ps <br>
