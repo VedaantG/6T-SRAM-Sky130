@@ -1,0 +1,30 @@
+* SPICE3 file created from layout.ext - technology: sky130A
+
+.subckt layout WL VDD GND BL BLB
+X0 GND Q QB GND sky130_fd_pr__nfet_01v8 ad=0.252 pd=2.28 as=0.2436 ps=2.26 w=0.84 l=0.15
+X1 Q QB VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1218 pd=1.42 as=0.1428 ps=1.52 w=0.42 l=0.15
+X2 Q WL BL GND sky130_fd_pr__nfet_01v8 ad=0.2205 pd=1.96 as=0.1827 ps=1.84 w=0.63 l=0.15
+X3 QB WL BLB GND sky130_fd_pr__nfet_01v8 ad=0.2205 pd=1.96 as=0.1827 ps=1.84 w=0.63 l=0.15
+X4 Q QB GND GND sky130_fd_pr__nfet_01v8 ad=0.2436 pd=2.26 as=0.2856 ps=2.36 w=0.84 l=0.15
+X5 VDD Q QB VDD sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+C0 QB BLB 0.02592f
+C1 VDD BL 0
+C2 Q WL 0.0856f
+C3 BLB WL 0.01337f
+C4 Q BLB 0
+C5 QB VDD 0.11032f
+C6 QB BL 0.00237f
+C7 VDD WL 0.10346f
+C8 BL WL 0.01147f
+C9 Q VDD 0.2194f
+C10 Q BL 0.01908f
+C11 VDD BLB 0
+C12 QB WL 0.02848f
+C13 Q QB 0.0605f
+C14 BL GND 0.07757f
+C15 BLB GND 0.09193f
+C16 WL GND 1.26554f
+C17 VDD GND 0.73102f
+C18 QB GND 0.60211f 
+C19 Q GND 0.48382f 
+.ends layout

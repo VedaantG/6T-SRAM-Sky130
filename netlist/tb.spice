@@ -1,0 +1,50 @@
+.include "/home/vedaant/Desktop/VLSI/SRAM/layout/layout.spice"
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+*Power
+VDD VDD 0 1.8
+VWL WL 0 PULSE(0 1.8 10n 100p 100p 5n 20n)
+*VBL  BL 0 PULSE(0 1.8 0 100p 100p 10n 20n)
+*VBLB BLB 0 PULSE(1.8 0 0 100p 100p 10n 20n)
+RBL VDD BL 1Meg
+RBLB VDD BLB 1Meg
+CBL BL 0 100f
+CBLB BLB 0 100f
+X1 WL VDD GND BL BLB layout
+
+*.ic v(x1.Q)=1.8 v(x1.QB)=0
+.tran 10p 20n
+
+* Write Delay
+*.measure tran tWL TRIG v(WL) VAL=0.9 RISE=2
+*.measure tran tQ  TARG v(x1.Q) VAL=0.9 FALL=1
+*.measure tran WriteZeroDelay PARAM='tQ-tWL'
+
+* Supply Current
+*.measure tran AvgCurrent AVG I(VDD)
+
+* Peak Current
+*.measure tran PeakCurrent MAX I(VDD)
+
+* Average Power
+*.measure tran AvgPower PARAM='1.8*AvgCurrent'
+
+*.measure tran tBLB TARG v(BLB) VAL=1.7 FALL=1
+*.measure tran ReadDelay PARAM='tBLB-tWL'
+
+.control
+run
+
+*print WriteZeroDelay
+*print AvgCurrent
+*print PeakCurrent
+*print AvgPower
+
+plot v(BL)
+plot v(BLB)
+plot v(WL)
+
+
+.endc
+
+.end
